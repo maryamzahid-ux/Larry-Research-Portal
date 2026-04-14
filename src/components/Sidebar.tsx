@@ -27,10 +27,12 @@ export function Sidebar() {
   return (
     <aside className="w-64 bg-zinc-950 text-zinc-100 flex-shrink-0 flex flex-col min-h-screen">
       <div className="p-6 border-b border-zinc-800">
-        <h2 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-          <div className="w-3 h-3 bg-indigo-500 rounded-full animate-pulse" />
-          Larry Research Portal
-        </h2>
+        <Link href="/" className="flex flex-col gap-3">
+          <img src="/images/logo.png" alt="Curve Logo" className="h-10 w-auto object-contain self-start" />
+          <h2 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+            Curve Asset Management
+          </h2>
+        </Link>
         <p className="text-xs text-zinc-400 mt-1 uppercase tracking-wider">{role} Portal</p>
       </div>
       <nav className="flex-1 p-4 space-y-2">
