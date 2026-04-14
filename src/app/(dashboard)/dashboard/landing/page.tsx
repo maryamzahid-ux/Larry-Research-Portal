@@ -105,7 +105,7 @@ export default function UserPortalLanding() {
                   <span className="text-zinc-400 font-mono text-sm">MAR 31, 2026</span>
                </div>
                <h1 className="text-3xl md:text-5xl font-black mb-4 tracking-tight leading-tight">Mega-Cap Yields Compress as Credit Markets Price Out Rate Cuts</h1>
-               <p className="text-zinc-300 font-medium tracking-wide mb-8 text-lg max-w-2xl leading-relaxed">Exclusive analysis from the Larry Research Portal uncovers a tightening spread across AAA-rated manufacturing bonds, while algorithmic momentum sustains broader index levels globally amidst severe supply constraints.</p>
+               <p className="text-zinc-300 font-medium tracking-wide mb-8 text-lg max-w-2xl leading-relaxed">Exclusive analysis from the Curve Research Portal uncovers a tightening spread across AAA-rated manufacturing bonds, while algorithmic momentum sustains broader index levels globally amidst severe supply constraints.</p>
                <div className="flex gap-4">
                   <Link href="/dashboard" className="bg-white hover:bg-zinc-200 text-zinc-950 px-6 py-3 font-bold rounded-xl text-sm transition-colors flex items-center gap-2">Read Full Sector Report <ArrowUpRight className="w-4 h-4"/></Link>
                </div>

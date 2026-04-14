@@ -138,7 +138,7 @@ export default function AdminUploadPage() {
     <div className="max-w-3xl mx-auto space-y-8 pb-10">
       <div>
         <h1 className="text-2xl font-bold dark:text-zinc-100">Intelligent Data Pipeline</h1>
-        <p className="text-zinc-500">Upload Larry Research Portal's static PDF reports. The system dynamically reads, categorizes, and maps them to proper modules (Sector vs Credit).</p>
+        <p className="text-zinc-500">Upload Curve Asset Management's static PDF reports. The system dynamically reads, categorizes, and maps them to proper modules (Sector vs Credit).</p>
       </div>
 
       <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-8 shadow-sm">

@@ -25,11 +25,11 @@ export default function LoginPage() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950 p-4">
       <div className="w-full max-w-md bg-white dark:bg-zinc-900 rounded-2xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
         <div className="bg-zinc-900 text-white p-8 text-center flex flex-col items-center gap-4">
-          <div className="bg-zinc-800 p-4 rounded-full">
-            <Building2 className="w-8 h-8 text-zinc-100" />
+          <div className="bg-white p-2 rounded-xl">
+            <img src="/images/logo.png" alt="Curve Logo" className="h-12 w-auto object-contain" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold tracking-tight">Larry Research Portal</h1>
+            <h1 className="text-2xl font-bold tracking-tight">Curve Asset Management</h1>
             <p className="text-zinc-400 text-sm mt-1">Institutional Data & Reporting Portal</p>
           </div>
         </div>
