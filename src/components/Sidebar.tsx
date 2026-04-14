@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAppStore } from "@/lib/store";
-import { LayoutDashboard, Settings, Users, UploadCloud, Send, Activity, Layout } from "lucide-react";
+import { LayoutDashboard, Settings, Users, UploadCloud, Send, Activity, Layout, Package } from "lucide-react";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -12,7 +12,8 @@ export function Sidebar() {
   const userLinks = [
     { name: "Dashboard", href: "/dashboard/landing", icon: <LayoutDashboard className="w-5 h-5" /> },
     { name: "Market Overview", href: "/dashboard", icon: <Activity className="w-5 h-5" /> },
-    { name: "Subscription Settings", href: "/dashboard/subscriptions", icon: <Settings className="w-5 h-5" /> },
+    { name: "Alerts", href: "/dashboard/subscriptions", icon: <Settings className="w-5 h-5" /> },
+    { name: "Subscription Plans", href: "/dashboard/plans", icon: <Package className="w-5 h-5" /> },
   ];
 
   const adminLinks = [
@@ -27,8 +28,10 @@ export function Sidebar() {
   return (
     <aside className="w-64 bg-zinc-950 text-zinc-100 flex-shrink-0 flex flex-col min-h-screen">
       <div className="p-6 border-b border-zinc-800">
-        <Link href="/" className="flex flex-col gap-3">
-          <img src="/images/logo.png" alt="Curve Logo" className="h-10 w-auto object-contain self-start" />
+        <Link href="/" className="flex flex-col gap-3 group">
+          <div className="bg-white p-2 rounded-xl w-fit shadow-sm group-hover:shadow-md transition-shadow">
+            <img src="/images/logo.png" alt="Curve Logo" className="h-8 w-auto object-contain" />
+          </div>
           <h2 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
             Curve Asset Management
           </h2>

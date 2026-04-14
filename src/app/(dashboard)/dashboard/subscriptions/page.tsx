@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppStore } from "@/lib/store";
-import { CheckCircle2, Circle, Search, PlusCircle, XCircle } from "lucide-react";
+import { CheckCircle2, Circle, Search, PlusCircle, XCircle, Activity } from "lucide-react";
 import { useState } from "react";
 
 const ALL_SECTORS = [
@@ -23,7 +23,7 @@ export default function SubscriptionsPage() {
     sectorSelections: ['Auto'], issuerSelections: [], frequency: 'daily' as 'daily' | 'weekly', lastDeliveredAt: null, status: 'active'
   };
 
-  const [issuerSearch, setIssuerSearch] = useState('');
+  const [issuerSearch, setIssuerSearch] = useState("");
 
   const toggleSector = (sector: string) => {
     const isSubbed = currentUserSub.sectorSelections.includes(sector);
@@ -47,7 +47,6 @@ export default function SubscriptionsPage() {
     updateSubscription({ ...currentUserSub, issuerSelections: newSelections });
   };
 
-  // Group all available issuers to pick from
   const availableIssuers = issuers.filter(i => 
     i.issuerName.toLowerCase().includes(issuerSearch.toLowerCase()) || 
     (i.ticker && i.ticker.toLowerCase().includes(issuerSearch.toLowerCase()))
@@ -56,7 +55,7 @@ export default function SubscriptionsPage() {
   return (
     <div className="max-w-5xl mx-auto space-y-8 pb-10">
       <div>
-        <h1 className="text-3xl font-extrabold tracking-tight dark:text-zinc-100 mb-2">Subscription & Alerts</h1>
+        <h1 className="text-3xl font-extrabold tracking-tight dark:text-zinc-100 mb-2">Alert Configurations</h1>
         <p className="text-zinc-500 font-medium text-lg">Manage how and when you receive structured framework signals.</p>
       </div>
 
@@ -124,12 +123,10 @@ export default function SubscriptionsPage() {
            </div>
         </div>
 
-        {/* Selected Issuers Pinned at Top */}
         {currentUserSub.issuerSelections.length > 0 && (
            <div className="mb-6 p-4 bg-indigo-50 dark:bg-indigo-900/10 rounded-xl border border-indigo-100 dark:border-indigo-900/30 flex flex-wrap gap-2">
               <span className="text-sm font-bold text-indigo-800 dark:text-indigo-400 w-full mb-1">Actively Tagged Options:</span>
               {currentUserSub.issuerSelections.map(ticker => {
-                 const issuerData = issuers.find(i => i.ticker === ticker);
                  return (
                     <button key={ticker} onClick={() => toggleIssuer(ticker)} className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg text-xs tracking-wider flex items-center gap-1.5 transition-colors shadow-sm">
                        {ticker} <XCircle className="w-3.5 h-3.5 opacity-80" />
@@ -157,12 +154,8 @@ export default function SubscriptionsPage() {
                </button>
              )
           })}
-          {availableIssuers.length === 0 && (
-             <div className="col-span-full p-8 text-center text-zinc-500 font-medium">No system issuers match your search.</div>
-          )}
         </div>
       </div>
-
     </div>
   );
 }
